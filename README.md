@@ -13,6 +13,11 @@ For monitoring client:
 * MIME::Lite
 * Config::Simple
 
+```sh
+# On Ubuntu, can be installed as follows
+sudo apt-get install liblwp-mediatypes-perl liblwp-protocol-https-perl libxml-parser-lite-tree-perl libscalar-util-numeric-perl libmime-lite-perl libconfig-simple-perl
+```
+
 For report tool:
 
 * Perl 5 (tested with perl v5.10.1)
@@ -20,6 +25,13 @@ For report tool:
 * GD::Graph::Data
 * MIME::Lite
 * Config::Simple
+
+```sh
+# On Ubuntu, can be installed as follows
+sudo apt-get install libgd-graph-perl libmime-lite-perl libconfig-simple-perl
+```
+
+
 
 ## Configuration
 Prior to use, configure the XML in helloXML.pl and randomXML.pl. Also, configure monitor.ini. The configuration file monitor.ini is divided to three parts. Section [email] contains email settings for alert messages. Section [monitor] contains following settings:
@@ -41,7 +53,7 @@ The script simple_monitor.pl is the simplest version of clients. It does not off
 
 ## report.pl
 
-This script will function with the monitoring client and will send graphs of the previous day's results. Run the script with ./report.pl.
+This script will function with the monitoring client and will send graphs of the previous day's results by email. Run the script with ./report.pl. Make sure you have an SMTP server configured.
 
 # About these scripts
 
