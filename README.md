@@ -1,5 +1,5 @@
 # Monitoring clients for Palveluväylä
-This repository contains clients which can be used to check out the services in Palveluväylä. 
+This repository contains clients which can be used to check the status of the the services in Palveluväylä. 
 
 ## Requirements
 
