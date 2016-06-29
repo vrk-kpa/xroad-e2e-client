@@ -6,5 +6,5 @@ RUN yum clean all
 RUN sed -i 's/requiretty/!requiretty/' /etc/sudoers
 
 USER root
-CMD ["sh", "-c", "/workspace/xroad-catalog-collector/build_rpm.sh" ]
+CMD ["sh", "-c", "/workspace/xroad-e2e-client/packages/xroad-e2e-client/script/build_rpm.sh" ]
 

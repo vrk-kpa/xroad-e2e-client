@@ -12,8 +12,9 @@ Requires(post):     systemd
 Requires(preun):    systemd
 Requires(postun):   systemd
 
-%define src %{_topdir}
+%define src %{_topdir}/../../..
 %define conf /usr/share/xroad/xroad-e2e-client
+%define target /usr/share/xroad/xroad-e2e-client
 
 %description
 X-Road Simple e2e testing client
@@ -27,12 +28,15 @@ mkdir -p %{buildroot}%{conf}
 mkdir -p %{buildroot}%{_unitdir}
 mkdir -p %{buildroot}/etc/cron.d
 mkdir -p %{buildroot}/opt/xroad-e2e-client
-cp -p %{src}/../../../build/resources/main/report.ini %{buildroot}%{conf}
-cp -p %{src}/../../../build/resources/main/monitor.ini %{buildroot}%{conf}
-cp -p %{src}/../../../build/resources/main/randomXML.pl %{buildroot}%{conf}
-cp -p %{src}/../../../build/resources/main/helloXML.pl %{buildroot}%{conf}
-cp -p %{src}/SOURCES/%{name}.cron %{buildroot}/etc/cron.d/%{name}
-cp -p %{src}/SOURCES/* %{buildroot}/usr/share/xroad/xroad-e2e-client
+cp -p %{src}/report.ini %{buildroot}%{conf}
+cp -p %{src}/monitor.ini %{buildroot}%{conf}
+cp -p %{src}/randomXML.pl %{buildroot}%{conf}
+cp -p %{src}/helloXML.pl %{buildroot}%{conf}
+cp -p %{src}/simple_monitor.pl %{buildroot}%{target}
+cp -p %{src}/report.pl %{buildroot}%{target}
+cp -p %{src}/LICENSE %{buildroot}%{target}
+cp -p %{src}/README.md %{buildroot}%{target}
+cp -p %{_topdir}/SOURCES/%{name}.cron %{buildroot}/etc/cron.d/%{name}
 
 
 %clean
@@ -46,12 +50,10 @@ rm -rf %{buildroot}
 %config(noreplace) %{conf}/helloXML.pl
 
 %attr(755,root,root) /etc/cron.d/%{name}
-%attr(644,root,root) %{_unitdir}/%{name}.service
-%attr(744,xroad,xroad) %{jlib}/%{name}.jar
-%attr(744,xroad-catalog,xroad-catalog) /usr/share/xroad/xroad-e2e-client/simple_monitor.pl
-%attr(744,xroad-catalog,xroad-catalog) /usr/share/xroad/xroad-e2e-client/report.pl
-%attr(644,xroad-catalog,xroad-catalog) /usr/share/xroad/xroad-e2e-client/LICENSE
-%attr(644,xroad-catalog,xroad-catalog) /usr/share/xroad/xroad-e2e-client/README.md
+%attr(744,xroad-catalog,xroad-catalog) %{target}/simple_monitor.pl
+%attr(744,xroad-catalog,xroad-catalog) %{target}/report.pl
+%attr(644,xroad-catalog,xroad-catalog) %{target}/LICENSE
+%attr(644,xroad-catalog,xroad-catalog) %{target}/README.md
 
 %pre
 
