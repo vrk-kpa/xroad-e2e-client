@@ -1,6 +1,6 @@
 #!/bin/sh
 #DIR=$(cd "$(dirname $0)" && pwd)
-DIR="workspace/xroad-e2e-client/packages/xroad-e2e-client/redhat"
+DIR="workspace/packages/xroad-e2e-client/redhat"
 cd $DIR
 ROOT=`pwd`
 RELEASE=1
