@@ -1,4 +1,4 @@
-=
+=begin comment
 The MIT License (MIT)
 
 Copyright (c) 2016 CSC - IT Center for Science, Population Register Centre (VRK)

@@ -50,6 +50,7 @@ The [SSL] section is to set certificate and key files.
 ## simple_monitor.pl
 
 The script simple_monitor.pl is the simplest version of clients. It does not offer watchdog but will have the alert message features. Simply configure the aforementioned files and run with ./simple_monitor.pl.
+Generates a lock file (with default name alert.lock) to prevent re-sending of mail. Remove the lock file (in a cron script or something) if you want this to function again!
 
 ## report.pl
 

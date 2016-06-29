@@ -1,0 +1,6 @@
+SHELL=/bin/bash
+MAILTO=sami.kallio@gofore.com
+5 * * * * root cd /opt/xroad-e2e-client && ./simple_monitor.pl
+15 7 * * * root cd /opt/xroad-e2e-client && ./report.pl
+
+

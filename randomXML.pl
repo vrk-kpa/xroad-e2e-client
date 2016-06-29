@@ -1,4 +1,4 @@
-=
+=begin comment
 The MIT License (MIT)
 
 Copyright (c) 2016 CSC - IT Center for Science, Population Register Centre (VRK)
@@ -50,3 +50,5 @@ sub soapRandom { return "<SOAP-ENV:Envelope xmlns:SOAP-ENV=\"http://schemas.xmls
 </SOAP-ENV:Envelope>"; }
 
 1;
+
+
