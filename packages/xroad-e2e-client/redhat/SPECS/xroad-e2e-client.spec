@@ -7,7 +7,7 @@ Release:            %{rel}%{?snapshot}%{?dist}
 Summary:            X-Road Simple e2e testing client
 Group:              Applications/Internet
 License:            MIT
-Requires:           systemd, cronie, cronie-anacron, perl, perl(LWP::UserAgent), perl(HTTP::Request::Common), perl(XML::Parser::Lite::Tree), perl(Scalar::Util::Numeric), perl(MIME::Lite), perl(Config::Simple), perl(GD::Graph::bars), perl(GD::Graph::Data)
+Requires:           systemd, cronie, cronie-anacron, perl, perl(LWP::UserAgent), perl(HTTP::Request::Common), perl(XML::Parser:), perl(Scalar::Util), perl(MIME::Lite), perl(Config::Simple), perl(GD::Graph::bars), perl(GD::Graph::Data)
 Requires(post):     systemd
 Requires(preun):    systemd
 Requires(postun):   systemd
