@@ -28,7 +28,7 @@ use strict;
 use GD::Graph::bars;
 use GD::Graph::Data;
 use MIME::Lite;
-use Config::Simple;
+use Config;
 
 my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) = localtime();
 
