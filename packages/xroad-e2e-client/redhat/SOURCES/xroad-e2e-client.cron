@@ -1,6 +1,10 @@
 SHELL=/bin/bash
 MAILTO=sami.kallio@gofore.com
-5 * * * * root cd /opt/xroad-e2e-client && ./simple_monitor.pl
-15 7 * * * root cd /opt/xroad-e2e-client && ./report.pl
+# Run simple monitor every five minutes
+*/5 * * * * root cd /opt/xroad-e2e-client && ./simple_monitor.pl
+
+# Run report once a day and remove the alert lock file for simple monitor alerts.
+# Change the name also here if you change the lock file alert.lock in monitor.ini
+15 7 * * * root cd /opt/xroad-e2e-client && rm -f alert.lock && ./report.pl
 
 

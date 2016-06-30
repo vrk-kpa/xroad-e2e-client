@@ -44,17 +44,17 @@ cp -p %{_topdir}/SOURCES/%{name}.cron %{buildroot}/etc/cron.d/%{name}
 rm -rf %{buildroot}
 
 %files
-%defattr(600,xroad,xroad,-)
+%defattr(644,xroad,xroad,-)
 %config(noreplace) %{conf}/report.ini
 %config(noreplace) %{conf}/monitor.ini
 %config(noreplace) %{conf}/randomXML.pl
 %config(noreplace) %{conf}/helloXML.pl
 
 %attr(755,root,root) /etc/cron.d/%{name}
-%attr(744,xroad-catalog,xroad-catalog) %{target}/simple_monitor.pl
-%attr(744,xroad-catalog,xroad-catalog) %{target}/report.pl
-%attr(644,xroad-catalog,xroad-catalog) %{target}/LICENSE
-%attr(644,xroad-catalog,xroad-catalog) %{target}/README.md
+%attr(555,root,root) %{target}/simple_monitor.pl
+%attr(555,root,root) %{target}/report.pl
+%attr(444,root,root) %{target}/LICENSE
+%attr(444,root,root) %{target}/README.md
 
 %pre
 
