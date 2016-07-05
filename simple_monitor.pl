@@ -10,6 +10,7 @@ use HTTP::Request::Common;
 use XML::Parser;
 use Scalar::Util;
 use MIME::Lite;
+use Config::Simple;
 
 =begin comment
 The MIT License (MIT)
