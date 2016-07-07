@@ -11,7 +11,7 @@ Requires:           systemd, cronie, cronie-anacron, cpan, perl, perl(LWP::UserA
 Requires(post):     systemd
 Requires(preun):    systemd
 Requires(postun):   systemd
-Provides: perl(.::randomXML.pl), perl(.::helloXML.pl)
+Provides: perl(.::randomXML.pl), perl(.::helloXML.pl), perl(XML::Parser::Lite::Tree), perl(Config::Simple)
 
 %define src %{_topdir}/../../..
 %define conf /usr/share/xroad/xroad-e2e-client
